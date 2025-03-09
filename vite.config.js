@@ -36,6 +36,9 @@ const LibsCssFiles = GetFilesArray('resources/assets/vendor/libs/**/*.css');
 // Processing Fonts Scss Files
 const FontsScssFiles = GetFilesArray('resources/assets/vendor/fonts/!(_)*.scss');
 
+const JsFiles = GetFilesArray('resources/js/*.js');
+const ReportJsFiles = GetFilesArray('resources/js/report/*.js');
+
 // Processing Window Assignment for Libs like jKanban, pdfMake
 function libsWindowAssignment() {
   return {
@@ -61,7 +64,9 @@ export default defineConfig({
         ...pageJsFiles,
         ...vendorJsFiles,
         ...LibsJsFiles,
-        'resources/js/laravel-user-management.js', // Processing Laravel User Management CRUD JS File
+        'resources/js/laravel-user-management.js',
+        ...JsFiles,
+        ...ReportJsFiles,
         ...CoreScssFiles,
         ...LibsScssFiles,
         ...LibsCssFiles,

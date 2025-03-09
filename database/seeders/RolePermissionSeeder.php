@@ -36,7 +36,7 @@ class RolePermissionSeeder extends Seeder
     Permission::create(['group' => 'work order', 'name' => 'delete work orders']);
 
     $superAdmin->givePermissionTo(Permission::all());
-    $manager->givePermissionTo(['create work order', 'assign operator', 'update work order', 'view all work orders', 'read work order']);
+    $manager->givePermissionTo(['create work order', 'assign operator', 'update work order', 'read work order']);
     $operator->givePermissionTo(['update own work order', 'read work order']);
   }
 }

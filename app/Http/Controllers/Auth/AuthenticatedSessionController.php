@@ -32,7 +32,8 @@ class AuthenticatedSessionController extends Controller
 
     $request->session()->regenerate();
 
-    return redirect(route('users.index'));
+    $route = Auth::user()->role != 'super admin' ? route('work-orders.index') : route('users.index');
+    return redirect($route);
   }
 
   /**
