@@ -1,0 +1,46 @@
+{
+  "menu": [
+    {
+      "menuHeader": "Menu"
+    },
+    {
+      "url": "users",
+      "name": "User",
+      "icon": "menu-icon tf-icons ti ti-user",
+      "slug": "users.index",
+      "permission": "read user"
+    },
+    {
+      "url": "roles",
+      "name": "Role",
+      "icon": "menu-icon tf-icons ti ti-lock-cog",
+      "slug": "roles.index",
+      "permission": "read role"
+    },
+    {
+      "url": "work-orders",
+      "name": "Work Order",
+      "icon": "menu-icon tf-icons ti ti-brand-speedtest",
+      "slug": "work-orders.index",
+      "permission": "read work order"
+    },
+    {
+      "name": "Reports",
+      "icon": "menu-icon tf-icons ti ti-file-description",
+      "slug": "reports",
+      "permission": "read work order",
+      "submenu": [
+        {
+          "url": "reports/work-orders",
+          "name": "Work Order",
+          "slug": "reports.work-orders"
+        },
+        {
+          "url": "reports/operators",
+          "name": "Operator",
+          "slug": "reports.operators"
+        }
+      ]
+    }
+  ]
+}
