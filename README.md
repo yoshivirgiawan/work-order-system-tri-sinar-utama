@@ -76,6 +76,16 @@ docker exec -it laravel_app php artisan migrate:fresh --seed
 
 ---
 
+## 🔥 User Dummy
+
+| Email                         | Password     |
+| ----------------------------- | ------------ |
+| superadmin@example.com        | password2001 |
+| productionmanager@example.com | password2001 |
+| operator@example.com          | password2001 |
+
+---
+
 ## 🛑 Stop & Hapus Container
 
 ```sh
